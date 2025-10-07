@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://dpw2arnij8d26"]
+
+[ext_resource type="Texture2D" uid="uid://d3elg2wm64hpl" path="res://assets/Enemigo1/Enemy 1-Melee-Sheet.png" id="1_0fdnc"]
+[ext_resource type="Shape2D" uid="uid://bdw8rou08t2ef" path="res://scenes/enemigo1/colisionEnemigo1.tres" id="2_y6b3d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8c2ys"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(0, 214, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34img"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(48, 214, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdcts"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(96, 214, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vubf1"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(144, 214, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcbrc"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(192, 214, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrxh2"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(240, 214, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5qes"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(288, 214, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irlm4"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(336, 214, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nk3lt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8c2ys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34img")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdcts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vubf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcbrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrxh2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5qes")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irlm4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Enemigo" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="animEnemigo1" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_nk3lt")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 1)
+shape = ExtResource("2_y6b3d")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
