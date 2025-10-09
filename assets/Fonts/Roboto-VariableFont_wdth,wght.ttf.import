@@ -1,0 +1,41 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://cbt3tto7q7t42"
+path="res://.godot/imported/Roboto-VariableFont_wdth,wght.ttf-ce367f7e8125d3d52c219c7bed2fc228.fontdata"
+
+[deps]
+
+source_file="res://assets/Fonts/Roboto-VariableFont_wdth,wght.ttf"
+dest_files=["res://.godot/imported/Roboto-VariableFont_wdth,wght.ttf-ce367f7e8125d3d52c219c7bed2fc228.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=true
+disable_embedded_bitmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=true
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=false
+oversampling=1.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "Nueva Configuración",
+"size": Vector2i(16, 0),
+&"variation_embolden": 0.0
+}]
+language_support={}
+script_support={}
+opentype_features={}
