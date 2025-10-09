@@ -1,7 +1,35 @@
-[gd_scene load_steps=12 format=3 uid="uid://dpw2arnij8d26"]
+[gd_scene load_steps=27 format=3 uid="uid://dpw2arnij8d26"]
 
 [ext_resource type="Texture2D" uid="uid://d3elg2wm64hpl" path="res://assets/Enemigo1/Enemy 1-Melee-Sheet.png" id="1_0fdnc"]
 [ext_resource type="Shape2D" uid="uid://bdw8rou08t2ef" path="res://scenes/enemigo1/colisionEnemigo1.tres" id="2_y6b3d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fdnc"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(0, 80, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6b3d"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(48, 80, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmueh"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(96, 80, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8wr8"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(144, 80, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdis5"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(0, 145, 48, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csuql"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(48, 145, 48, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb1rw"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(96, 145, 48, 47)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8c2ys"]
 atlas = ExtResource("1_0fdnc")
@@ -35,8 +63,71 @@ region = Rect2(288, 214, 48, 32)
 atlas = ExtResource("1_0fdnc")
 region = Rect2(336, 214, 48, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xemh"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(0, 15, 48, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n28ju"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(48, 15, 48, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hj835"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(96, 15, 48, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnv4c"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(144, 15, 48, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6o5op"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(192, 15, 48, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ufnp"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(240, 15, 48, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpnq2"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(288, 15, 48, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxr76"]
+atlas = ExtResource("1_0fdnc")
+region = Rect2(336, 15, 48, 50)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_nk3lt"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fdnc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6b3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmueh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8wr8")
+}],
+"loop": true,
+"name": &"Ataque",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdis5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csuql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb1rw")
+}],
+"loop": true,
+"name": &"Fin de ataque",
+"speed": 3.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8c2ys")
@@ -63,8 +154,37 @@ animations = [{
 "texture": SubResource("AtlasTexture_irlm4")
 }],
 "loop": true,
-"name": &"idle",
-"speed": 5.0
+"name": &"idle_down",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xemh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n28ju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hj835")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gnv4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6o5op")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ufnp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpnq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxr76")
+}],
+"loop": true,
+"name": &"preparacion de ataque",
+"speed": 9.0
 }]
 
 [node name="Enemigo" type="Node2D"]
@@ -74,7 +194,8 @@ position = Vector2(-2, -3)
 
 [node name="animEnemigo1" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_nk3lt")
-animation = &"idle"
+animation = &"Ataque"
+frame_progress = 0.559718
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, 1)
