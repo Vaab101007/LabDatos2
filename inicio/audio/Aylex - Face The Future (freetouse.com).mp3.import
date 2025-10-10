@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgq4ewor7uwi5"
+path="res://.godot/imported/Aylex - Face The Future (freetouse.com).mp3-61cf7475d78d533d60e6ce837e6ff389.mp3str"
+
+[deps]
+
+source_file="res://inicio/audio/Aylex - Face The Future (freetouse.com).mp3"
+dest_files=["res://.godot/imported/Aylex - Face The Future (freetouse.com).mp3-61cf7475d78d533d60e6ce837e6ff389.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

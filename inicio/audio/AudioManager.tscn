@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cporf2pf5yvpa"]
+
+[ext_resource type="Script" uid="uid://c8hh16i6vs1m5" path="res://inicio/audio/audio_manager.gd" id="1_sn2ix"]
+[ext_resource type="AudioStream" uid="uid://cgq4ewor7uwi5" path="res://inicio/audio/Aylex - Face The Future (freetouse.com).mp3" id="2_0v3y5"]
+
+[node name="AudioManager" type="Node2D"]
+script = ExtResource("1_sn2ix")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_0v3y5")
+autoplay = true
+bus = &"music"
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"sfx"

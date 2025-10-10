@@ -1,0 +1,40 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://biasfq1fvbi0t"
+path="res://.godot/imported/Silver.ttf-db0b44722e18798de53b3993f8466ec0.fontdata"
+
+[deps]
+
+source_file="res://assests/Fonts/Silver.ttf"
+dest_files=["res://.godot/imported/Silver.ttf-db0b44722e18798de53b3993f8466ec0.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=0
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=0
+subpixel_positioning=1
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "Nueva Configuración",
+"size": Vector2i(16, 0)
+}]
+language_support={}
+script_support={}
+opentype_features={}
