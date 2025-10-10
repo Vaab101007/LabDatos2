@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/button-305770.mp3-c76239035c4ae21c12a98a049e4
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

@@ -14,6 +14,11 @@ config/name="LabDatos"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AudioManager="*res://inicio/audio/AudioManager.tscn"
+SceneTransitions="*res://inicio/SceneTransitions.tscn"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
