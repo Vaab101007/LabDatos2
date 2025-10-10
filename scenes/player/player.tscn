@@ -775,7 +775,7 @@ size = Vector2(11.0013, 35.0013)
 size = Vector2(10.003, 34.9968)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lvxji"]
-size = Vector2(18, 27)
+size = Vector2(16, 25)
 
 [node name="Player" type="Node2D"]
 
@@ -785,12 +785,11 @@ metadata/_edit_group_ = true
 
 [node name="anim" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_h17s1")
-animation = &"daño_right"
+animation = &"idle_down"
 autoplay = "idle_down"
-frame_progress = 0.723856
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-visible = false
+position = Vector2(0, -0.5)
 shape = ExtResource("3_gmlin")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
@@ -845,7 +844,7 @@ collision_layer = 32
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Hurtbox"]
-position = Vector2(0, -1.5)
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_lvxji")
 debug_color = Color(0.311501, 0.493053, 1, 0.42)
 
