@@ -102,6 +102,7 @@ texture_normal = ExtResource("6_0nqds")
 texture_pressed = ExtResource("6_0nqds")
 texture_hover = ExtResource("10_cprgw")
 
+[connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="guideButton" to="." method="_on_guide_button_pressed"]
 [connection signal="pressed" from="loreButton" to="." method="_on_lore_button_pressed"]
 [connection signal="pressed" from="musicaButton" to="musicaButton" method="_on_pressed"]

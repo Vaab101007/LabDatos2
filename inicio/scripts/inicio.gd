@@ -16,3 +16,9 @@ func _on_lore_button_pressed() -> void:
 	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
 	AudioManager.SFXPlayer.play()
 	SceneTransitions.change_scene_to_file("res://inicio/lore.tscn")
+
+
+func _on_start_button_pressed() -> void:
+	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
+	AudioManager.SFXPlayer.play()
+	SceneTransitions.change_scene_to_file("res://scenes/mapa/mapa.tscn")
