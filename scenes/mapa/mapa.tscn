@@ -19,3 +19,6 @@ tile_set = ExtResource("2_v373u")
 
 [node name="PlayerSpawn" type="Marker2D" parent="."]
 position = Vector2(456, 200)
+
+[node name="Enemy1Spawn" type="Marker2D" parent="."]
+position = Vector2(454, 150)

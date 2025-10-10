@@ -1,16 +1,19 @@
 extends Node2D
 var PlayerScene := preload("res://scenes/player/player.tscn")
+var EnemyScene := preload("res://scenes/enemigo1/enemigo1.tscn") 
+
 
 func _ready():
-	# Instanciar al jugador
-	var player = PlayerScene.instantiate()
+	var player = PlayerScene.instantiate() # Instanciar al jugador
 	add_child(player)
 
-	# Colocarlo en el punto de spawn
-	var spawn := $PlayerSpawn
+	var spawn := $PlayerSpawn # Colocarlo en el punto de spawn
 	player.global_position = spawn.global_position
-
-	# Activar la cámara del jugador (si la tiene)
+	
 	var cam := player.get_node_or_null("Camera2D")
 	if cam:
 		cam.make_current()
+	
+	var enemy = EnemyScene.instantiate() # Instanciar enemigo
+	add_child(enemy)
+	enemy.global_position = $Enemy1Spawn.global_position
