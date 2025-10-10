@@ -53,20 +53,21 @@ texture_pressed = ExtResource("3_0nqds")
 texture_hover = ExtResource("4_vjlsw")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 472.0
-offset_top = 288.0
-offset_right = 653.0
-offset_bottom = 409.0
+offset_left = 464.0
+offset_top = 289.0
+offset_right = 645.0
+offset_bottom = 410.0
 theme_override_colors/font_color = Color(0.109364, 0.087002, 0.0150032, 1)
 theme_override_fonts/font = ExtResource("5_02dlf")
 theme_override_font_sizes/font_size = 30
-text = "STAR"
+text = "START"
 
 [node name="Label" type="Label" parent="Label"]
 layout_mode = 0
-offset_top = 96.0
-offset_right = 181.0
-offset_bottom = 217.0
+offset_left = 5.0
+offset_top = 94.0
+offset_right = 186.0
+offset_bottom = 215.0
 theme_override_colors/font_color = Color(0.109364, 0.087002, 0.0150032, 1)
 theme_override_fonts/font = ExtResource("5_02dlf")
 theme_override_font_sizes/font_size = 30
@@ -75,9 +76,9 @@ text = "GUIDE"
 [node name="Label" type="Label" parent="Label/Label"]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 96.0
+offset_top = 98.0
 offset_right = 189.0
-offset_bottom = 217.0
+offset_bottom = 219.0
 theme_override_colors/font_color = Color(0.109364, 0.087002, 0.0150032, 1)
 theme_override_fonts/font = ExtResource("5_02dlf")
 theme_override_font_sizes/font_size = 30

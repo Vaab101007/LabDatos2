@@ -1,3 +1,65 @@
-[gd_scene format=3 uid="uid://dr7ta2tct3crm"]
+[gd_scene load_steps=5 format=3 uid="uid://dr7ta2tct3crm"]
+
+[ext_resource type="Texture2D" uid="uid://dc513x0v5ium" path="res://inicio/image/circuit.png" id="1_g4tpg"]
+[ext_resource type="FontFile" uid="uid://bj44644dulh07" path="res://assets/Fonts/ComicHelvetic_Light.otf" id="2_71n48"]
+[ext_resource type="FontFile" uid="uid://b5lt21bsvyn6v" path="res://assets/Fonts/Pixeled.ttf" id="3_bokug"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gqhv7"]
+texture = ExtResource("1_g4tpg")
 
 [node name="Juego" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1151.0
+offset_bottom = 651.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_gqhv7")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 288.0
+offset_top = 144.0
+offset_right = 795.0
+offset_bottom = 182.0
+theme_override_colors/font_shadow_color = Color(8.66354e-07, 0.715793, 0.449266, 1)
+theme_override_fonts/font = ExtResource("2_71n48")
+theme_override_font_sizes/font_size = 40
+text = "Descibra el mensaje binario."
+
+[node name="Label" type="Label" parent="."]
+offset_left = 240.0
+offset_top = 8.0
+offset_right = 956.0
+offset_bottom = 148.0
+theme_override_colors/font_shadow_color = Color(0, 0.9, 0.27, 1)
+theme_override_fonts/font = ExtResource("3_bokug")
+theme_override_font_sizes/font_size = 50
+text = "CIFRADO LÓGICO"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 12.0
+offset_bottom = 158.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "A"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "B"
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "C"
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "C"
+
+[node name="Label5" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "D"
+
+[node name="Label6" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "E"
