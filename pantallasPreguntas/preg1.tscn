@@ -13,7 +13,7 @@
 [ext_resource type="FontFile" uid="uid://b5lt21bsvyn6v" path="res://assets/Fonts/Pixeled.ttf" id="11_xml4o"]
 [ext_resource type="Texture2D" uid="uid://clldwnus62fb2" path="res://inicio/buttons/atrasButton.tres" id="12_ktxl7"]
 [ext_resource type="Texture2D" uid="uid://b78l0b3x6dnqr" path="res://inicio/buttons/atrasPressButton.tres" id="13_oh66t"]
-[ext_resource type="Script" uid="uid://duww8cqcmif17" path="res://inicio/menu_button.gd" id="14_y2hs8"]
+[ext_resource type="Script" uid="uid://duww8cqcmif17" path="res://inicio/scripts/menu_button.gd" id="14_y2hs8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oh66t"]
 texture = ExtResource("2_ktxl7")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dbpb17mi6121k"]
+[gd_scene load_steps=13 format=3 uid="uid://dbpb17mi6121k"]
 
 [ext_resource type="Script" uid="uid://m0orkt4o1mv" path="res://inicio/scripts/inicio.gd" id="1_1gddd"]
 [ext_resource type="Texture2D" uid="uid://dxrwauthv1m1j" path="res://inicio/image/FONDO1.png" id="1_02dlf"]
@@ -8,8 +8,9 @@
 [ext_resource type="FontFile" uid="uid://b5lt21bsvyn6v" path="res://assets/Fonts/Pixeled.ttf" id="5_02dlf"]
 [ext_resource type="Texture2D" uid="uid://wy5nme2tt1vd" path="res://inicio/buttons/exitButton.tres" id="6_0nqds"]
 [ext_resource type="Texture2D" uid="uid://d4ni14x8nl2n" path="res://inicio/buttons/musicaButton.tres" id="6_m12qu"]
-[ext_resource type="Script" uid="uid://d4jgkqfp5ly5q" path="res://inicio/musica_button.gd" id="10_44otc"]
+[ext_resource type="Script" uid="uid://d4jgkqfp5ly5q" path="res://inicio/scripts/musica_button.gd" id="10_44otc"]
 [ext_resource type="Texture2D" uid="uid://i6xux8ncq63h" path="res://inicio/buttons/exitButtonPress.tres" id="10_cprgw"]
+[ext_resource type="Script" uid="uid://b7xkn24k7fi6v" path="res://inicio/scripts/exit_button.gd" id="11_1gddd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ac0f8"]
 texture = ExtResource("1_02dlf")
@@ -102,9 +103,10 @@ scale = Vector2(3.2, 3.2)
 texture_normal = ExtResource("6_0nqds")
 texture_pressed = ExtResource("6_0nqds")
 texture_hover = ExtResource("10_cprgw")
+script = ExtResource("11_1gddd")
 
 [connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="guideButton" to="." method="_on_guide_button_pressed"]
 [connection signal="pressed" from="loreButton" to="." method="_on_lore_button_pressed"]
 [connection signal="pressed" from="musicaButton" to="musicaButton" method="_on_pressed"]
-[connection signal="pressed" from="exitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="exitButton" to="exitButton" method="_on_pressed"]

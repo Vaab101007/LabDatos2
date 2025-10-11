@@ -8,10 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://gecmanh6q7vl" path="res://inicio/buttons/flecha2.tres" id="5_qcwdr"]
 [ext_resource type="Texture2D" uid="uid://4xtu8y4vfq6t" path="res://inicio/buttons/flecha2press.tres" id="6_7q4e7"]
 [ext_resource type="Texture2D" uid="uid://d4ni14x8nl2n" path="res://inicio/buttons/musicaButton.tres" id="8_o4e8y"]
-[ext_resource type="Script" uid="uid://d4jgkqfp5ly5q" path="res://inicio/musica_button.gd" id="9_of72q"]
+[ext_resource type="Script" uid="uid://d4jgkqfp5ly5q" path="res://inicio/scripts/musica_button.gd" id="9_of72q"]
 [ext_resource type="Texture2D" uid="uid://clldwnus62fb2" path="res://inicio/buttons/atrasButton.tres" id="10_o4e8y"]
 [ext_resource type="Texture2D" uid="uid://b78l0b3x6dnqr" path="res://inicio/buttons/atrasPressButton.tres" id="11_ga0hu"]
-[ext_resource type="Script" uid="uid://duww8cqcmif17" path="res://inicio/menu_button.gd" id="12_54rfk"]
+[ext_resource type="Script" uid="uid://duww8cqcmif17" path="res://inicio/scripts/menu_button.gd" id="12_54rfk"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0s7am"]
 texture = ExtResource("1_luty5")
