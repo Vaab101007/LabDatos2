@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxris4mgxgycn"
-path="res://.godot/imported/Recibes un correo del “Banco Nacional” diciendo que tu cuenta será bloqueada si no confirmas tus datos. ¿Cuál es la mejor acción (1).png-1ee9acf2f5a921dff29b3e7da42a3d05.ctex"
+uid="uid://bfwew80o11ywn"
+path="res://.godot/imported/Pantalla2.png-274bdd21a14365ad549daa513c32e9dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pantallasPreguntas/Recibes un correo del “Banco Nacional” diciendo que tu cuenta será bloqueada si no confirmas tus datos. ¿Cuál es la mejor acción (1).png"
-dest_files=["res://.godot/imported/Recibes un correo del “Banco Nacional” diciendo que tu cuenta será bloqueada si no confirmas tus datos. ¿Cuál es la mejor acción (1).png-1ee9acf2f5a921dff29b3e7da42a3d05.ctex"]
+source_file="res://pantallasPreguntas/Pantalla2.png"
+dest_files=["res://.godot/imported/Pantalla2.png-274bdd21a14365ad549daa513c32e9dc.ctex"]
 
 [params]
 
