@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://bdft85mgv1kxb"]
 
-[ext_resource type="Script" uid="uid://cgmkg2m3v4boc" path="res://inicio/again.gd" id="1_8p57h"]
+[ext_resource type="Script" uid="uid://cgmkg2m3v4boc" path="res://inicio/scripts/again.gd" id="1_8p57h"]
 [ext_resource type="Texture2D" uid="uid://cdqq81bq6h263" path="res://inicio/image/IMAGEN4.png" id="2_7jbuk"]
 [ext_resource type="Texture2D" uid="uid://bbq82ni7hm8fr" path="res://assets/player/personaje.tres" id="3_m8knx"]
 [ext_resource type="FontFile" uid="uid://b5lt21bsvyn6v" path="res://assets/Fonts/Pixeled.ttf" id="4_srkk2"]

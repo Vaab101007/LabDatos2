@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c5mfmn2fl0bt7"]
+
+[node name="Quehacer" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1151.0
+offset_bottom = 642.0

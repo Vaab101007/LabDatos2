@@ -243,4 +243,5 @@ script = ExtResource("14_ql3qa")
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="otravezPanel/TextureRect/regresarButton" to="." method="_on_regresar_button_pressed"]
+[connection signal="pressed" from="correctoPanel/TextureRect/siguienteButton" to="." method="_on_siguiente_button_pressed"]
 [connection signal="pressed" from="inicioButton" to="inicioButton" method="_on_pressed"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://7l8m8ubevubw"]
 
 [ext_resource type="Texture2D" uid="uid://b32s3y7lv63jc" path="res://inicio/image/fondo33.png" id="1_dbefl"]
-[ext_resource type="Script" uid="uid://bvb2wd1vyfk6x" path="res://inicio/start.gd" id="1_s70m2"]
+[ext_resource type="Script" uid="uid://bvb2wd1vyfk6x" path="res://inicio/scripts/start.gd" id="1_s70m2"]
 [ext_resource type="FontFile" uid="uid://b5lt21bsvyn6v" path="res://assets/Fonts/Pixeled.ttf" id="2_s70m2"]
 [ext_resource type="FontFile" uid="uid://t8w28xx3wyy5" path="res://assets/Fonts/ComicHelvetic_Heavy.otf" id="3_0alhc"]
 [ext_resource type="Texture2D" uid="uid://wy5nme2tt1vd" path="res://inicio/buttons/exitButton.tres" id="5_2f1bg"]

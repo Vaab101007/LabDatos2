@@ -27,6 +27,7 @@ var estado = "VERIFICAR"  # cambia entre VERIFICAR y GENERAR
 @onready var correct_panel = $correctoPanel
 @onready var again_panel = $otravezPanel
 @onready var lupa_panel = $lupaPanel
+@onready var panel = $Panel
 
 func _ready():
 	randomize()
@@ -83,3 +84,9 @@ func _on_lupa_button_pressed() -> void:
 
 func _on_texture_button_pressed() -> void:
 	lupa_panel.visible = false
+
+
+func _on_siguiente_button_pressed() -> void:
+	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
+	AudioManager.SFXPlayer.play()
+	self.visible = false
