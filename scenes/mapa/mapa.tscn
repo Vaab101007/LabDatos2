@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://d0iw1w3p4wq0o"]
+[gd_scene load_steps=17 format=4 uid="uid://d0iw1w3p4wq0o"]
 
 [ext_resource type="Script" uid="uid://by6mvl2w6bni2" path="res://scenes/mapa/mapa.gd" id="1_ml2m4"]
 [ext_resource type="TileSet" uid="uid://dlfb1o3vtqvt0" path="res://tilesets/gameWallsTileSet.tres" id="1_pg520"]
@@ -8,6 +8,7 @@
 [ext_resource type="TileSet" uid="uid://d2wo5ajqrcnu" path="res://tilesets/flowArrowsTileSet.tres" id="5_dtod7"]
 [ext_resource type="TileSet" uid="uid://bb0vkyciv6x46" path="res://tilesets/backgroundTileSet.tres" id="6_d1dw7"]
 [ext_resource type="Script" uid="uid://sxhtg5hf2cms" path="res://scenes/scripts/area_botonEnemigos.gd" id="8_crek2"]
+[ext_resource type="Script" uid="uid://b8wjg0wtsrrrr" path="res://scenes/scripts/mapa.gd" id="9_vt6gj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dtod7"]
 height = 28.0
@@ -128,3 +129,8 @@ position = Vector2(911, 1094)
 [node name="Enemy1Spawn6" type="Marker2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(2073, 1137)
+
+[node name="Overlay" type="CanvasLayer" parent="."]
+offset = Vector2(-10, -10)
+transform = Transform2D(1, 0, 0, 1, -10, -10)
+script = ExtResource("9_vt6gj")

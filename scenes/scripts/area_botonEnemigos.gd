@@ -2,6 +2,8 @@ extends Area2D
 
 var EnemyScene = preload("res://scenes/enemigo1/enemigo1.tscn")
 
+
+
 var zonas := {
 	1: {"max_enemigos": 3, "spawn": "Enemy1Spawn"},
 	2: {"max_enemigos": 1, "spawn": "Enemy1Spawn2"},
@@ -58,6 +60,15 @@ func _on_enemy_defeated(shape_idx):
 		print("Generando el siguiente enemigo automáticamente en zona", shape_idx, "...")
 		generar_un_enemigo(shape_idx)
 
+var escenas_por_zona := {
+	1: preload("res://minijuego/juego.tscn"),
+	2: preload("res://pantallasPreguntas/preg1.tscn"),
+	3: preload("res://pantallasPreguntas/preg2.tscn"),
+	4: preload("res://minijuego/juego.tscn"),
+	5: preload("res://pantallasPreguntas/preg3.tscn"),
+	6: preload("res://pantallasPreguntas/preg4.tscn"),
+}
+
 func _on_enemy_fully_removed(shape_idx):
 	enemigos_removidos[shape_idx] += 1
 	print("Enemigos removidos tras muerte en zona", shape_idx, ":", enemigos_removidos[shape_idx])
@@ -67,3 +78,23 @@ func _on_enemy_fully_removed(shape_idx):
 		enemigos_vivos[shape_idx] = 0
 		enemigos_removidos[shape_idx] = 0
 		zona_activada[shape_idx] = false
+
+		var escena = escenas_por_zona[shape_idx].instantiate()
+
+# 🔹 Agregamos la escena al CanvasLayer (Overlay)
+		var overlay = get_tree().get_current_scene().get_node("Overlay")
+		overlay.add_child(escena)
+
+# 🔹 Esperamos un frame para que Godot calcule tamaños y layouts
+#		await get_tree().process_frame
+
+# 🔹 Centramos dependiendo del tipo de escena
+	#	var viewport_size = get_viewport().get_visible_rect().size
+
+	#	if escena is Node2D:
+			
+	# Si quieres centrarla en el medio exacto de la pantalla
+	#		escena.position = viewport_size / 2
+
+	#	elif escena is Control:
+	#		escena.set_anchors_preset(Control.PRESET_FULL_RECT)
