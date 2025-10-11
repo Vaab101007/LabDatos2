@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d4ni14x8nl2n" path="res://inicio/buttons/musicaButton.tres" id="3_rgqbw"]
 [ext_resource type="Script" uid="uid://d4jgkqfp5ly5q" path="res://inicio/musica_button.gd" id="4_mynrg"]
 [ext_resource type="Texture2D" uid="uid://b78l0b3x6dnqr" path="res://inicio/buttons/atrasPressButton.tres" id="5_jfdlr"]
-[ext_resource type="Texture2D" uid="uid://cnb28n6ptqrsp" path="res://inicio/buttons/atrasButton.tres" id="6_0iogu"]
+[ext_resource type="Texture2D" uid="uid://clldwnus62fb2" path="res://inicio/buttons/atrasButton.tres" id="5_tgsql"]
 [ext_resource type="Script" uid="uid://duww8cqcmif17" path="res://inicio/menu_button.gd" id="7_plh4s"]
 [ext_resource type="Texture2D" uid="uid://b1na3wbyq28vk" path="res://inicio/image/lore1 (2).png" id="8_ubu3m"]
 [ext_resource type="Texture2D" uid="uid://gecmanh6q7vl" path="res://inicio/buttons/flecha2.tres" id="9_cimh5"]
@@ -37,12 +37,12 @@ script = ExtResource("4_mynrg")
 [node name="inicioButton" type="TextureButton" parent="."]
 offset_left = 24.0
 offset_top = 8.0
-offset_right = 48.0
+offset_right = 41.0
 offset_bottom = 27.0
 scale = Vector2(3, 3)
-texture_normal = ExtResource("5_jfdlr")
-texture_pressed = ExtResource("6_0iogu")
-texture_hover = ExtResource("6_0iogu")
+texture_normal = ExtResource("5_tgsql")
+texture_pressed = ExtResource("5_jfdlr")
+texture_hover = ExtResource("5_jfdlr")
 script = ExtResource("7_plh4s")
 
 [node name="SlideImage" type="TextureRect" parent="."]

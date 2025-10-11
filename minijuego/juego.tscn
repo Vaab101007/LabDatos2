@@ -1,13 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://dr7ta2tct3crm"]
+[gd_scene load_steps=23 format=3 uid="uid://dr7ta2tct3crm"]
 
-[ext_resource type="Texture2D" uid="uid://dc513x0v5ium" path="res://inicio/image/circuit.png" id="1_g4tpg"]
+[ext_resource type="Script" uid="uid://ejuq0shyidvg" path="res://minijuego/juego.gd" id="1_3ex71"]
+[ext_resource type="Texture2D" uid="uid://deqc6gcvgwo81" path="res://inicio/image/CIRCUIT1.png" id="1_gqhv7"]
 [ext_resource type="FontFile" uid="uid://bj44644dulh07" path="res://assets/Fonts/ComicHelvetic_Light.otf" id="2_71n48"]
 [ext_resource type="FontFile" uid="uid://b5lt21bsvyn6v" path="res://assets/Fonts/Pixeled.ttf" id="3_bokug"]
+[ext_resource type="Texture2D" uid="uid://cywopum7etive" path="res://inicio/buttons/buttonBlue.tres" id="4_13rh0"]
+[ext_resource type="Texture2D" uid="uid://d4ni14x8nl2n" path="res://inicio/buttons/musicaButton.tres" id="5_7tk3n"]
+[ext_resource type="Script" uid="uid://d4jgkqfp5ly5q" path="res://inicio/musica_button.gd" id="6_6g0bb"]
+[ext_resource type="Texture2D" uid="uid://b7w0y5jqdpc6m" path="res://inicio/buttons/idkPress.tres" id="6_7tk3n"]
+[ext_resource type="Texture2D" uid="uid://d2fyswi4w7343" path="res://inicio/buttons/idk.tres" id="8_6g0bb"]
+[ext_resource type="Texture2D" uid="uid://b78l0b3x6dnqr" path="res://inicio/buttons/atrasPressButton.tres" id="9_c1pwg"]
+[ext_resource type="Texture2D" uid="uid://cnb28n6ptqrsp" path="res://inicio/buttons/listoButton.tres" id="10_emahy"]
+[ext_resource type="Texture2D" uid="uid://clldwnus62fb2" path="res://inicio/buttons/atrasButton.tres" id="10_mvag2"]
+[ext_resource type="Script" uid="uid://duww8cqcmif17" path="res://inicio/menu_button.gd" id="11_3ex71"]
+[ext_resource type="Texture2D" uid="uid://5exgtao47qjd" path="res://inicio/buttons/listoPressButton.tres" id="12_emahy"]
+[ext_resource type="Texture2D" uid="uid://b32s3y7lv63jc" path="res://inicio/image/fondo33.png" id="14_bvrq6"]
+[ext_resource type="Texture2D" uid="uid://cxty42ago4c0c" path="res://inicio/buttons/button.tres" id="15_mvag2"]
+[ext_resource type="Texture2D" uid="uid://qhc5c5va7xqh" path="res://inicio/buttons/buttonPress.tres" id="16_sp74v"]
+[ext_resource type="Texture2D" uid="uid://bcmbxpsbvia53" path="res://inicio/buttons/buttonS.tres" id="17_26wxb"]
+[ext_resource type="Texture2D" uid="uid://wy5nme2tt1vd" path="res://inicio/buttons/exitButton.tres" id="19_3ghuk"]
+[ext_resource type="Texture2D" uid="uid://i6xux8ncq63h" path="res://inicio/buttons/exitButtonPress.tres" id="20_4bnch"]
+[ext_resource type="Texture2D" uid="uid://dsgg7scqdccir" path="res://inicio/image/codigo_binario_2.jpg" id="21_681dx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gqhv7"]
-texture = ExtResource("1_g4tpg")
+texture = ExtResource("1_gqhv7")
 
 [node name="Juego" type="Node2D"]
+script = ExtResource("1_3ex71")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 1151.0
@@ -15,51 +34,314 @@ offset_bottom = 651.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_gqhv7")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 288.0
-offset_top = 144.0
-offset_right = 795.0
-offset_bottom = 182.0
+offset_left = 299.0
+offset_top = 177.0
+offset_right = 815.0
+offset_bottom = 215.0
 theme_override_colors/font_shadow_color = Color(8.66354e-07, 0.715793, 0.449266, 1)
 theme_override_fonts/font = ExtResource("2_71n48")
 theme_override_font_sizes/font_size = 40
-text = "Descibra el mensaje binario."
+text = "Descifra el mensaje binario."
 
 [node name="Label" type="Label" parent="."]
-offset_left = 240.0
-offset_top = 8.0
-offset_right = 956.0
-offset_bottom = 148.0
+offset_left = 244.0
+offset_top = 40.0
+offset_right = 960.0
+offset_bottom = 187.0
 theme_override_colors/font_shadow_color = Color(0, 0.9, 0.27, 1)
 theme_override_fonts/font = ExtResource("3_bokug")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 52
 text = "CIFRADO LÓGICO"
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_right = 12.0
-offset_bottom = 158.0
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 13.0
+offset_top = 284.0
+offset_right = 129.0
+offset_bottom = 336.0
+scale = Vector2(2, 2)
+texture = ExtResource("4_13rh0")
 
-[node name="Label" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "A"
+[node name="cod1" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 14.0
+offset_right = 111.0
+offset_bottom = 37.0
+theme_override_fonts/font = ExtResource("2_71n48")
+theme_override_font_sizes/font_size = 16
+text = "01000100"
 
-[node name="Label2" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "B"
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 237.0
+offset_top = 284.0
+offset_right = 353.0
+offset_bottom = 336.0
+scale = Vector2(2, 2)
+texture = ExtResource("4_13rh0")
 
-[node name="Label3" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "C"
+[node name="cod2" type="Label" parent="TextureRect2"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 14.0
+offset_right = 111.0
+offset_bottom = 37.0
+theme_override_fonts/font = ExtResource("2_71n48")
+theme_override_font_sizes/font_size = 16
+text = "10110"
 
-[node name="Label4" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "C"
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_left = 461.0
+offset_top = 284.0
+offset_right = 577.0
+offset_bottom = 336.0
+scale = Vector2(2, 2)
+texture = ExtResource("4_13rh0")
 
-[node name="Label5" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "D"
+[node name="cod3" type="Label" parent="TextureRect3"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 14.0
+offset_right = 111.0
+offset_bottom = 37.0
+theme_override_fonts/font = ExtResource("2_71n48")
+theme_override_font_sizes/font_size = 16
+text = "10110"
 
-[node name="Label6" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "E"
+[node name="TextureRect4" type="TextureRect" parent="."]
+offset_left = 685.0
+offset_top = 284.0
+offset_right = 801.0
+offset_bottom = 336.0
+scale = Vector2(2, 2)
+texture = ExtResource("4_13rh0")
+
+[node name="cod4" type="Label" parent="TextureRect4"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 14.0
+offset_right = 111.0
+offset_bottom = 37.0
+theme_override_fonts/font = ExtResource("2_71n48")
+theme_override_font_sizes/font_size = 16
+text = "10110"
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+offset_left = 909.0
+offset_top = 284.0
+offset_right = 1025.0
+offset_bottom = 336.0
+scale = Vector2(2, 2)
+texture = ExtResource("4_13rh0")
+
+[node name="cod5" type="Label" parent="TextureRect5"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 14.0
+offset_right = 111.0
+offset_bottom = 37.0
+theme_override_fonts/font = ExtResource("2_71n48")
+theme_override_font_sizes/font_size = 16
+text = "10110"
+
+[node name="word2" type="Label" parent="."]
+offset_left = 248.0
+offset_top = 456.0
+offset_right = 605.0
+offset_bottom = 491.0
+theme_override_fonts/font = ExtResource("2_71n48")
+theme_override_font_sizes/font_size = 35
+text = "Mensaje decodificado:"
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 608.0
+offset_top = 448.0
+offset_right = 888.0
+offset_bottom = 506.0
+
+[node name="TextEdit" type="TextEdit" parent="Panel2"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 6.0
+offset_right = 281.0
+offset_bottom = 54.0
+theme_override_font_sizes/font_size = 23
+
+[node name="word" type="Label" parent="Panel2"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 14.0
+offset_right = 270.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource("2_71n48")
+theme_override_font_sizes/font_size = 35
+
+[node name="musicaButton" type="TextureButton" parent="."]
+offset_left = 1080.0
+offset_top = 8.0
+offset_right = 1097.0
+offset_bottom = 25.0
+scale = Vector2(3.2, 3.2)
+texture_normal = ExtResource("5_7tk3n")
+texture_pressed = ExtResource("5_7tk3n")
+script = ExtResource("6_6g0bb")
+
+[node name="lupaButton" type="TextureButton" parent="."]
+offset_left = 1080.0
+offset_top = 584.0
+offset_right = 1102.0
+offset_bottom = 605.0
+scale = Vector2(3.2, 3.2)
+texture_normal = ExtResource("6_7tk3n")
+texture_pressed = ExtResource("8_6g0bb")
+texture_hover = ExtResource("8_6g0bb")
+
+[node name="inicioButton" type="TextureButton" parent="."]
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 27.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("10_mvag2")
+texture_pressed = ExtResource("9_c1pwg")
+texture_hover = ExtResource("9_c1pwg")
+script = ExtResource("11_3ex71")
+
+[node name="continueButton" type="TextureButton" parent="."]
+offset_left = 472.0
+offset_top = 528.0
+offset_right = 521.0
+offset_bottom = 546.0
+scale = Vector2(3.4, 3.4)
+texture_normal = ExtResource("10_emahy")
+texture_pressed = ExtResource("12_emahy")
+texture_hover = ExtResource("12_emahy")
+
+[node name="otravezPanel" type="Panel" parent="."]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="TextureRect" type="TextureRect" parent="otravezPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.028
+anchor_bottom = 0.062
+offset_left = 192.0
+offset_top = 64.0
+offset_right = 935.744
+offset_bottom = 535.824
+texture = ExtResource("14_bvrq6")
+
+[node name="Label" type="Label" parent="otravezPanel/TextureRect"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 224.0
+offset_right = 688.0
+offset_bottom = 281.0
+theme_override_fonts/font = ExtResource("2_71n48")
+theme_override_font_sizes/font_size = 60
+text = "INTENTE DE NUEVO"
+
+[node name="regresarButton" type="TextureButton" parent="otravezPanel/TextureRect"]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 392.0
+offset_right = 360.0
+offset_bottom = 416.0
+scale = Vector2(3.5, 3.5)
+texture_normal = ExtResource("15_mvag2")
+texture_pressed = ExtResource("16_sp74v")
+texture_hover = ExtResource("17_26wxb")
+
+[node name="Label2" type="Label" parent="otravezPanel/TextureRect"]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 392.0
+offset_right = 480.0
+offset_bottom = 457.0
+theme_override_fonts/font = ExtResource("3_bokug")
+theme_override_font_sizes/font_size = 23
+text = "REPETIR"
+
+[node name="correctoPanel" type="Panel" parent="."]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="TextureRect" type="TextureRect" parent="correctoPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.028
+anchor_bottom = 0.062
+offset_left = 192.0
+offset_top = 64.0
+offset_right = 935.744
+offset_bottom = 535.824
+texture = ExtResource("14_bvrq6")
+
+[node name="Label" type="Label" parent="correctoPanel/TextureRect"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 192.0
+offset_right = 664.0
+offset_bottom = 309.0
+theme_override_fonts/font = ExtResource("2_71n48")
+theme_override_font_sizes/font_size = 60
+text = "LO RESOLVISTE CORRECTAMENTE"
+horizontal_alignment = 1
+autowrap_mode = 2
+justification_flags = 171
+
+[node name="siguienteButton" type="TextureButton" parent="correctoPanel/TextureRect"]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 392.0
+offset_right = 360.0
+offset_bottom = 416.0
+scale = Vector2(3.5, 3.5)
+texture_normal = ExtResource("15_mvag2")
+texture_pressed = ExtResource("16_sp74v")
+texture_hover = ExtResource("17_26wxb")
+
+[node name="Label2" type="Label" parent="correctoPanel/TextureRect"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 392.0
+offset_right = 487.0
+offset_bottom = 457.0
+theme_override_fonts/font = ExtResource("3_bokug")
+theme_override_font_sizes/font_size = 23
+text = "CONTINUE"
+
+[node name="lupaPanel" type="Panel" parent="."]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="TextureButton" type="TextureButton" parent="lupaPanel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 46.0
+offset_bottom = 86.0
+scale = Vector2(3.2, 3.2)
+texture_normal = ExtResource("19_3ghuk")
+texture_pressed = ExtResource("20_4bnch")
+
+[node name="TextureRect6" type="TextureRect" parent="lupaPanel"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 72.0
+offset_right = 1064.0
+offset_bottom = 608.0
+texture = ExtResource("21_681dx")
+expand_mode = 1
+
+[connection signal="pressed" from="musicaButton" to="musicaButton" method="_on_pressed"]
+[connection signal="pressed" from="lupaButton" to="." method="_on_lupa_button_pressed"]
+[connection signal="pressed" from="inicioButton" to="inicioButton" method="_on_pressed"]
+[connection signal="pressed" from="continueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="otravezPanel/TextureRect/regresarButton" to="." method="_on_regresar_button_pressed"]
+[connection signal="pressed" from="lupaPanel/TextureButton" to="." method="_on_texture_button_pressed"]

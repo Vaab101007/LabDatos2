@@ -1,0 +1,29 @@
+extends Node2D
+
+@onready var correct_panel = $correctoPanel
+@onready var again_panel = $otravezPanel
+
+func _on_button_1_pressed() -> void:
+	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
+	AudioManager.SFXPlayer.play()
+	again_panel.visible = true
+
+func _on_button_2_pressed() -> void:
+	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
+	AudioManager.SFXPlayer.play()
+	again_panel.visible = true
+
+func _on_button_3_pressed() -> void:
+	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
+	AudioManager.SFXPlayer.play()
+	correct_panel.visible = true
+
+func _on_button_4_pressed() -> void:
+	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
+	AudioManager.SFXPlayer.play()
+	again_panel.visible = true
+
+func _on_regresar_button_pressed() -> void:
+	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
+	AudioManager.SFXPlayer.play()
+	SceneTransitions.change_scene_to_file("res://pantallasPreguntas/preg1.tscn")
