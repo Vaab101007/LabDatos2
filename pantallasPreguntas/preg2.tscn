@@ -18,7 +18,7 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xteoj"]
 texture = ExtResource("2_a5ebp")
 
-[node name="Preg3" type="Node2D"]
+[node name="preg2" type="Node2D"]
 script = ExtResource("1_xmppj")
 
 [node name="Panel" type="Panel" parent="."]

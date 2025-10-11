@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://7l8m8ubevubw"]
+[gd_scene load_steps=11 format=3 uid="uid://7l8m8ubevubw"]
 
 [ext_resource type="Texture2D" uid="uid://b32s3y7lv63jc" path="res://inicio/image/fondo33.png" id="1_dbefl"]
 [ext_resource type="Script" uid="uid://bvb2wd1vyfk6x" path="res://inicio/scripts/start.gd" id="1_s70m2"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://wy5nme2tt1vd" path="res://inicio/buttons/exitButton.tres" id="5_2f1bg"]
 [ext_resource type="Texture2D" uid="uid://i6xux8ncq63h" path="res://inicio/buttons/exitButtonPress.tres" id="6_2shuc"]
 [ext_resource type="Script" uid="uid://b7xkn24k7fi6v" path="res://inicio/scripts/exit_button.gd" id="7_2shuc"]
+[ext_resource type="Texture2D" uid="uid://d4ni14x8nl2n" path="res://inicio/buttons/musicaButton.tres" id="8_anyfv"]
+[ext_resource type="Script" uid="uid://d4jgkqfp5ly5q" path="res://inicio/scripts/musica_button.gd" id="9_2s3fd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2f1bg"]
 texture = ExtResource("1_dbefl")
@@ -55,27 +57,37 @@ justification_flags = 162
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
-offset_left = 1040.0
-offset_top = 560.0
-offset_right = 1142.0
-offset_bottom = 610.0
+offset_left = 1014.0
+offset_top = 566.0
+offset_right = 1156.0
+offset_bottom = 616.0
 theme_override_colors/font_disabled_color = Color(0.69, 0.67758, 0.3174, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.630086, 0.21723, 0.288501, 1)
 theme_override_colors/icon_normal_color = Color(0.377721, 0.250878, 0.107395, 1)
 theme_override_font_sizes/font_size = 30
-text = "Omitir"
+text = "Siguiente"
 metadata/_edit_use_anchors_ = true
 
 [node name="exitButton" type="TextureButton" parent="."]
 offset_left = 72.0
-offset_top = 24.0
+offset_top = 16.0
 offset_right = 89.0
-offset_bottom = 41.0
+offset_bottom = 33.0
 scale = Vector2(3.2, 3.2)
 texture_normal = ExtResource("5_2f1bg")
 texture_pressed = ExtResource("5_2f1bg")
 texture_hover = ExtResource("6_2shuc")
 script = ExtResource("7_2shuc")
 
+[node name="musicaButton" type="TextureButton" parent="."]
+offset_left = 1128.0
+offset_top = 16.0
+offset_right = 1145.0
+offset_bottom = 33.0
+scale = Vector2(3.2, 3.2)
+texture_normal = ExtResource("8_anyfv")
+script = ExtResource("9_2s3fd")
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="exitButton" to="exitButton" method="_on_pressed"]
+[connection signal="pressed" from="musicaButton" to="musicaButton" method="_on_pressed"]

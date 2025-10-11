@@ -28,7 +28,6 @@ func _on_regresar_button_pressed() -> void:
 	AudioManager.SFXPlayer.play()
 	SceneTransitions.change_scene_to_file("res://pantallasPreguntas/preg1.tscn")
 
-
 func _on_siguiente_button_pressed() -> void:
 	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
 	AudioManager.SFXPlayer.play()

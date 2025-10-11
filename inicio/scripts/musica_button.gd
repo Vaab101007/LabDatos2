@@ -5,7 +5,6 @@ const ICON_SOUND_OFF = preload("res://inicio/buttons/musicaButtonPress.tres")
 
 func _ready():
 	update_icon()
-	connect("pressed", Callable(self, "_on_pressed"))
 
 
 func _on_pressed() -> void:

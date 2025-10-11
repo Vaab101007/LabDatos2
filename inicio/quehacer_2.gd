@@ -1,6 +1,7 @@
 extends Node2D
 
-func _on_button_pressed() -> void:
+
+func _on_exit_button_pressed() -> void:
 	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
 	AudioManager.SFXPlayer.play()
-	SceneTransitions.change_scene_to_file("res://inicio/quehacer.tscn")
+	self.visible = false

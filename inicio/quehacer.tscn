@@ -1,7 +1,138 @@
-[gd_scene format=3 uid="uid://c5mfmn2fl0bt7"]
+[gd_scene load_steps=13 format=3 uid="uid://c5mfmn2fl0bt7"]
+
+[ext_resource type="Script" uid="uid://ti1k7t8u8bj4" path="res://inicio/quehacer.gd" id="1_ob3ok"]
+[ext_resource type="Texture2D" uid="uid://b32s3y7lv63jc" path="res://inicio/image/fondo33.png" id="2_osm0n"]
+[ext_resource type="Texture2D" uid="uid://cn1tlbq5ax54y" path="res://inicio/buttons/palanca.tres" id="3_rs8xj"]
+[ext_resource type="Texture2D" uid="uid://csle6qiixv070" path="res://inicio/buttons/personaje1.tres" id="4_ccsh4"]
+[ext_resource type="FontFile" uid="uid://b5lt21bsvyn6v" path="res://assets/Fonts/Pixeled.ttf" id="6_6adhu"]
+[ext_resource type="FontFile" uid="uid://t8w28xx3wyy5" path="res://assets/Fonts/ComicHelvetic_Heavy.otf" id="7_pgjfs"]
+[ext_resource type="Texture2D" uid="uid://wy5nme2tt1vd" path="res://inicio/buttons/exitButton.tres" id="8_ccsh4"]
+[ext_resource type="Texture2D" uid="uid://i6xux8ncq63h" path="res://inicio/buttons/exitButtonPress.tres" id="9_tituv"]
+[ext_resource type="Script" uid="uid://b7xkn24k7fi6v" path="res://inicio/scripts/exit_button.gd" id="10_6adhu"]
+[ext_resource type="Texture2D" uid="uid://d4ni14x8nl2n" path="res://inicio/buttons/musicaButton.tres" id="11_6adhu"]
+[ext_resource type="Script" uid="uid://d4jgkqfp5ly5q" path="res://inicio/scripts/musica_button.gd" id="12_pgjfs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nqsku"]
+texture = ExtResource("2_osm0n")
 
 [node name="Quehacer" type="Node2D"]
+script = ExtResource("1_ob3ok")
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 1151.0
-offset_bottom = 642.0
+offset_right = 1155.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_nqsku")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 136.0
+offset_right = 675.0
+offset_bottom = 176.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_rs8xj")
+
+[node name="TextureRect3" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 352.0
+offset_right = 290.0
+offset_bottom = 396.0
+scale = Vector2(6, 6)
+texture = ExtResource("4_ccsh4")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 8.0
+offset_right = 843.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("6_6adhu")
+theme_override_font_sizes/font_size = 34
+text = "TENER EN CUENTA"
+paragraph_separator = "\\"
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 200.0
+offset_right = 537.0
+offset_bottom = 293.0
+theme_override_fonts/font = ExtResource("7_pgjfs")
+theme_override_font_sizes/font_size = 30
+text = "Haz click en la palanca azul."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 456.0
+offset_right = 952.0
+offset_bottom = 549.0
+theme_override_fonts/font = ExtResource("7_pgjfs")
+theme_override_font_sizes/font_size = 30
+text = "Presiona la tecla F o haz click para atacar."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0406926
+anchor_top = -0.0185185
+anchor_right = -0.0406926
+anchor_bottom = -0.0185185
+offset_left = 1014.0
+offset_top = 566.0
+offset_right = 1156.0
+offset_bottom = 616.0
+theme_override_colors/font_disabled_color = Color(0.69, 0.67758, 0.3174, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.630086, 0.21723, 0.288501, 1)
+theme_override_colors/icon_normal_color = Color(0.377721, 0.250878, 0.107395, 1)
+theme_override_font_sizes/font_size = 30
+text = "Siguiente"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.836364
+anchor_top = -0.0216049
+anchor_right = -0.836364
+anchor_bottom = -0.0216049
+offset_left = 1014.0
+offset_top = 566.0
+offset_right = 1156.0
+offset_bottom = 616.0
+theme_override_colors/font_disabled_color = Color(0.69, 0.67758, 0.3174, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.630086, 0.21723, 0.288501, 1)
+theme_override_colors/icon_normal_color = Color(0.377721, 0.250878, 0.107395, 1)
+theme_override_font_sizes/font_size = 30
+text = "Atras"
+metadata/_edit_use_anchors_ = true
+
+[node name="exitButton" type="TextureButton" parent="Panel"]
+offset_left = 14.0
+offset_top = 8.0
+offset_right = 31.0
+offset_bottom = 25.0
+scale = Vector2(3.2, 3.2)
+texture_normal = ExtResource("8_ccsh4")
+texture_pressed = ExtResource("8_ccsh4")
+texture_hover = ExtResource("9_tituv")
+script = ExtResource("10_6adhu")
+
+[node name="musicaButton" type="TextureButton" parent="."]
+offset_left = 1088.0
+offset_top = 8.0
+offset_right = 1105.0
+offset_bottom = 25.0
+scale = Vector2(3.2, 3.2)
+texture_normal = ExtResource("11_6adhu")
+script = ExtResource("12_pgjfs")
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel/exitButton" to="Panel/exitButton" method="_on_pressed"]
+[connection signal="pressed" from="musicaButton" to="musicaButton" method="_on_pressed"]
