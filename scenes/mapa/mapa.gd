@@ -14,6 +14,6 @@ func _ready():
 	if cam:
 		cam.make_current()
 	
-	var enemy = EnemyScene.instantiate() # Instanciar enemigo
-	add_child(enemy)
-	enemy.global_position = $Enemy1Spawn.global_position
+	# var enemy = EnemyScene.instantiate() # Instanciar enemigo
+	#add_child(enemy)
+	#enemy.global_position = $Enemy1Spawn.global_position

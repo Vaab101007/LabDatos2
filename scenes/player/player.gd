@@ -76,7 +76,7 @@ func _on_hit_area_entered(area: Area2D) -> void:
 			print("💥 daño enviado a:", enemy.name)
 
 # --- Recibir daño del enemigo (PASO 3) ---
-var hp := 5
+var hp := 50
 var invulnerable := false
 var i_frames := 0.5
 

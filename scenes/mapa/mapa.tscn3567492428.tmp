@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=4 uid="uid://d0iw1w3p4wq0o"]
 
-[ext_resource type="Script" uid="uid://by6mvl2w6bni2" path="res://scenes/mapa/mapa.gd" id="1_ml2m4"]
+[ext_resource type="Script" path="res://scenes/mapa/mapa.gd" id="1_ml2m4"]
 [ext_resource type="TileSet" uid="uid://dlfb1o3vtqvt0" path="res://tilesets/gameWallsTileSet.tres" id="1_pg520"]
 [ext_resource type="TileSet" uid="uid://c03c5oglwmi0p" path="res://tilesets/floorTileSet.tres" id="2_v373u"]
 [ext_resource type="TileSet" uid="uid://bmbog4hxqgfat" path="res://tilesets/propsTileSet.tres" id="3_p106v"]
@@ -107,24 +107,4 @@ position = Vector2(419, 248)
 
 [node name="Enemy1Spawn" type="Marker2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(-514, 668)
-
-[node name="Enemy1Spawn2" type="Marker2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(-1135, 1144)
-
-[node name="Enemy1Spawn3" type="Marker2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(25, 1145)
-
-[node name="Enemy1Spawn4" type="Marker2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(1535, 728)
-
-[node name="Enemy1Spawn5" type="Marker2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(911, 1094)
-
-[node name="Enemy1Spawn6" type="Marker2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(2073, 1137)
+position = Vector2(461, 147)
