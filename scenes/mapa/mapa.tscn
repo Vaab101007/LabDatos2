@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://d0iw1w3p4wq0o"]
+[gd_scene load_steps=33 format=4 uid="uid://d0iw1w3p4wq0o"]
 
 [ext_resource type="Script" uid="uid://by6mvl2w6bni2" path="res://scenes/mapa/mapa.gd" id="1_ml2m4"]
 [ext_resource type="TileSet" uid="uid://dlfb1o3vtqvt0" path="res://tilesets/gameWallsTileSet.tres" id="1_pg520"]
@@ -9,6 +9,21 @@
 [ext_resource type="TileSet" uid="uid://bb0vkyciv6x46" path="res://tilesets/backgroundTileSet.tres" id="6_d1dw7"]
 [ext_resource type="Script" uid="uid://sxhtg5hf2cms" path="res://scenes/scripts/area_botonEnemigos.gd" id="8_crek2"]
 [ext_resource type="Script" uid="uid://b8wjg0wtsrrrr" path="res://scenes/scripts/mapa.gd" id="9_vt6gj"]
+[ext_resource type="Texture2D" uid="uid://wy5nme2tt1vd" path="res://inicio/buttons/exitButton.tres" id="10_t6s33"]
+[ext_resource type="Texture2D" uid="uid://i6xux8ncq63h" path="res://inicio/buttons/exitButtonPress.tres" id="11_2rmvy"]
+[ext_resource type="Script" uid="uid://b7xkn24k7fi6v" path="res://inicio/scripts/exit_button.gd" id="12_4ouhh"]
+[ext_resource type="Texture2D" uid="uid://clldwnus62fb2" path="res://inicio/buttons/atrasButton.tres" id="13_p3wn2"]
+[ext_resource type="Texture2D" uid="uid://b78l0b3x6dnqr" path="res://inicio/buttons/atrasPressButton.tres" id="14_okm07"]
+[ext_resource type="Script" uid="uid://duww8cqcmif17" path="res://inicio/scripts/menu_button.gd" id="15_f1toh"]
+[ext_resource type="Texture2D" uid="uid://b7w0y5jqdpc6m" path="res://inicio/buttons/idkPress.tres" id="16_v0gbs"]
+[ext_resource type="Texture2D" uid="uid://d2fyswi4w7343" path="res://inicio/buttons/idk.tres" id="17_wfprg"]
+[ext_resource type="Texture2D" uid="uid://b32s3y7lv63jc" path="res://inicio/image/fondo33.png" id="18_wfprg"]
+[ext_resource type="Texture2D" uid="uid://d4ni14x8nl2n" path="res://inicio/buttons/musicaButton.tres" id="19_f1evb"]
+[ext_resource type="Script" uid="uid://d4jgkqfp5ly5q" path="res://inicio/scripts/musica_button.gd" id="20_ohftx"]
+[ext_resource type="Texture2D" uid="uid://cn1tlbq5ax54y" path="res://inicio/buttons/palanca.tres" id="21_qs5g0"]
+[ext_resource type="Texture2D" uid="uid://csle6qiixv070" path="res://inicio/buttons/personaje1.tres" id="22_5posd"]
+[ext_resource type="FontFile" uid="uid://b5lt21bsvyn6v" path="res://assets/Fonts/Pixeled.ttf" id="23_86csk"]
+[ext_resource type="FontFile" uid="uid://t8w28xx3wyy5" path="res://assets/Fonts/ComicHelvetic_Heavy.otf" id="24_d725c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dtod7"]
 height = 28.0
@@ -33,6 +48,9 @@ height = 28.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t8fqk"]
 radius = 9.0
 height = 26.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_27aa5"]
+texture = ExtResource("18_wfprg")
 
 [node name="EscenaMapa" type="Node2D"]
 script = ExtResource("1_ml2m4")
@@ -135,3 +153,135 @@ position = Vector2(2073, 1137)
 offset = Vector2(-10, -10)
 transform = Transform2D(1, 0, 0, 1, -10, -10)
 script = ExtResource("9_vt6gj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="lupaButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 1092.0
+offset_top = 579.0
+offset_right = 1111.0
+offset_bottom = 596.0
+scale = Vector2(3.2, 3.2)
+texture_normal = ExtResource("16_v0gbs")
+texture_pressed = ExtResource("17_wfprg")
+texture_hover = ExtResource("17_wfprg")
+
+[node name="exitButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 11.0
+offset_top = 7.0
+offset_right = 28.0
+offset_bottom = 24.0
+scale = Vector2(3.2, 3.2)
+texture_normal = ExtResource("10_t6s33")
+texture_pressed = ExtResource("10_t6s33")
+texture_hover = ExtResource("11_2rmvy")
+script = ExtResource("12_4ouhh")
+
+[node name="inicioButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 24.0
+offset_top = 581.0
+offset_right = 41.0
+offset_bottom = 598.0
+scale = Vector2(3.2, 3.2)
+texture_normal = ExtResource("13_p3wn2")
+texture_pressed = ExtResource("14_okm07")
+texture_hover = ExtResource("14_okm07")
+script = ExtResource("15_f1toh")
+
+[node name="lupaPanel" type="Panel" parent="CanvasLayer"]
+visible = false
+offset_left = 0.00012207
+offset_top = 6.10352e-05
+offset_right = 1155.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_27aa5")
+
+[node name="musicaButton" type="TextureButton" parent="CanvasLayer/lupaPanel"]
+layout_mode = 0
+offset_left = 1088.0
+offset_top = 8.0
+offset_right = 1105.0
+offset_bottom = 25.0
+scale = Vector2(3.2, 3.2)
+texture_normal = ExtResource("19_f1evb")
+script = ExtResource("20_ohftx")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/lupaPanel"]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 136.0
+offset_right = 675.0
+offset_bottom = 176.0
+scale = Vector2(6, 6)
+texture = ExtResource("21_qs5g0")
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/lupaPanel"]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 352.0
+offset_right = 290.0
+offset_bottom = 396.0
+scale = Vector2(6, 6)
+texture = ExtResource("22_5posd")
+
+[node name="Label" type="Label" parent="CanvasLayer/lupaPanel"]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 12.0
+offset_right = 780.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("23_86csk")
+theme_override_font_sizes/font_size = 34
+text = "TENER EN CUENTA"
+
+[node name="Label2" type="Label" parent="CanvasLayer/lupaPanel"]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 208.0
+offset_right = 544.0
+offset_bottom = 301.0
+theme_override_fonts/font = ExtResource("24_d725c")
+theme_override_font_sizes/font_size = 30
+text = "Haz click en la palanca azul."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="CanvasLayer/lupaPanel"]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 456.0
+offset_right = 952.0
+offset_bottom = 549.0
+theme_override_fonts/font = ExtResource("24_d725c")
+theme_override_font_sizes/font_size = 30
+text = "Presiona la tecla F o haz click para atacar."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="exitButton" type="TextureButton" parent="CanvasLayer/lupaPanel"]
+layout_mode = 0
+offset_left = 31.9999
+offset_top = 14.9999
+offset_right = 48.9999
+offset_bottom = 31.9999
+scale = Vector2(3.2, 3.2)
+texture_normal = ExtResource("10_t6s33")
+texture_pressed = ExtResource("10_t6s33")
+texture_hover = ExtResource("11_2rmvy")
+script = ExtResource("12_4ouhh")
+
+[node name="musicaButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 1088.0
+offset_top = 8.0
+offset_right = 1105.0
+offset_bottom = 25.0
+scale = Vector2(3.2, 3.2)
+texture_normal = ExtResource("19_f1evb")
+script = ExtResource("20_ohftx")
+
+[connection signal="pressed" from="CanvasLayer/lupaButton" to="." method="_on_lupa_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/exitButton" to="CanvasLayer/exitButton" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/inicioButton" to="CanvasLayer/inicioButton" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/lupaPanel/musicaButton" to="CanvasLayer/lupaPanel/musicaButton" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/lupaPanel/exitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/musicaButton" to="CanvasLayer/musicaButton" method="_on_pressed"]

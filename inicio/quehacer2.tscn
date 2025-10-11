@@ -23,6 +23,16 @@ offset_right = 1155.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_nqsku")
 
+[node name="musicaButton" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 1088.0
+offset_top = 8.0
+offset_right = 1105.0
+offset_bottom = 25.0
+scale = Vector2(3.2, 3.2)
+texture_normal = ExtResource("11_by8ir")
+script = ExtResource("12_fmtt8")
+
 [node name="TextureRect" type="TextureRect" parent="Panel"]
 layout_mode = 0
 offset_left = 632.0
@@ -87,14 +97,4 @@ texture_pressed = ExtResource("8_s7yy1")
 texture_hover = ExtResource("9_vwfc3")
 script = ExtResource("10_6vtsy")
 
-[node name="musicaButton" type="TextureButton" parent="."]
-offset_left = 1088.0
-offset_top = 8.0
-offset_right = 1105.0
-offset_bottom = 25.0
-scale = Vector2(3.2, 3.2)
-texture_normal = ExtResource("11_by8ir")
-script = ExtResource("12_fmtt8")
-
-[connection signal="pressed" from="Panel/exitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="pressed" from="musicaButton" to="musicaButton" method="_on_pressed"]
+[connection signal="pressed" from="Panel/musicaButton" to="Panel/musicaButton" method="_on_pressed"]

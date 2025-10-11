@@ -122,6 +122,14 @@ func die() -> void:
 		anim.frame = 0
 		anim.play(death_name)
 		await anim.animation_finished
-
+	
+	SceneTransitions.change_scene_to_file("res://inicio/again.tscn")
 	print("💀 Player ha muerto")
 	# despues muestra pantalla de muerte y reiniciods
+
+
+func _on_lupa_button_pressed() -> void:
+	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
+	AudioManager.SFXPlayer.play()
+	SceneTransitions.change_scene_to_file("res://inicio/quehacer2.tscn")
+	
