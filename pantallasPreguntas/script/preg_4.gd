@@ -26,7 +26,7 @@ func _on_button_4_pressed() -> void:
 func _on_regresar_button_pressed() -> void:
 	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
 	AudioManager.SFXPlayer.play()
-	SceneTransitions.change_scene_to_file("res://pantallasPreguntas/preg4.tscn")
+	again_panel.visible = false
 
 
 func _on_siguiente_button_pressed() -> void:

@@ -76,7 +76,8 @@ func _on_continue_button_pressed():
 func _on_regresar_button_pressed() -> void:
 	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
 	AudioManager.SFXPlayer.play()
-	SceneTransitions.change_scene_to_file("res://minijuego/juego.tscn")
+	text_edit.text = ""
+	again_panel.visible = false
 
 
 func _on_lupa_button_pressed() -> void:
