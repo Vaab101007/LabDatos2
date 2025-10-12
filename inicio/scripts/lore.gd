@@ -58,7 +58,7 @@ func _on_atras_button_pressed() -> void:
 	if current_slide > 0:      # Retrocede un slide, si no estamos en el primero
 		current_slide -= 1     # Retrocede al slide anterior
 		show_slide()           # Actualiza la vista
-	# Reproduce sonido de clic al presionar el botón
+	# Carga y reproduce sonido de clic al presionar el botón
 	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
 	AudioManager.SFXPlayer.play()
 
@@ -67,7 +67,7 @@ func _on_siguiente_button_pressed() -> void:
 	if current_slide < slides.size() - 1:   # Avanza un slide, si no estamos en el último
 		current_slide += 1                  # Avanza al siguiente slide
 		show_slide()                        # Actualiza la vista
-		# Reproduce sonido de clic al presionar el botón
+		# Carga y reproduce sonido de clic al presionar el botón
 		AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
 		AudioManager.SFXPlayer.play()
 	

@@ -81,6 +81,7 @@ func _on_continue_button_pressed():
 
 # Función del botón "Regresar" cuando se falla una respuesta
 func _on_regresar_button_pressed() -> void:
+	# Carga y reproduce el sonido del clic del botón.
 	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
 	AudioManager.SFXPlayer.play()
 	text_edit.text = ""                 # Limpia el texto ingresado

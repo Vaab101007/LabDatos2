@@ -48,7 +48,7 @@ func _on_flecha_button_pressed() -> void:
 	if current_slide < slides.size() - 1: # Si no estamos en el último slide
 		current_slide += 1 # Avanzamos al siguiente
 		show_slide()     # Actualizamos la imagen y los labels
-	# Reproduce el sonido del botón
+	# Carga y reproduce el sonido del botón
 	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
 	AudioManager.SFXPlayer.play()
 # Retrocedemos al slide anterior
@@ -57,6 +57,6 @@ func _on_flecha_1_button_pressed() -> void:
 		current_slide -= 1   # Retrocedemos uno
 		show_slide()    # Actualizamos la imagen y los labels
 		
-	# Reproduce el mismo sonido de clic
+	# Carga y reproduce el mismo sonido de clic
 	AudioManager.SFXPlayer.stream = preload("res://inicio/audio/button-305770.mp3")
 	AudioManager.SFXPlayer.play()
