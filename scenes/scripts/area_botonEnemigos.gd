@@ -1,8 +1,13 @@
 extends Area2D
 
 var EnemyScene = preload("res://scenes/enemigo1/enemigo1.tscn")
+var zonas_completadas := {1: false, 2: false, 3: false, 4: false, 5: false, 6: false}
+var juego_finalizado := false
 
-
+# --- agrega este flag ---
+var puede_activar_nodo_central := false
+# --- shape_idx del nodo central (ajústalo si es otro número) ---
+var shape_idx_nodo_central := 0 # por defecto parece ser el último CollisionShape2D (ajusta el número según el orden en tu escena)
 
 var zonas := {
 	1: {"max_enemigos": 3, "spawn": "Enemy1Spawn"},
@@ -25,10 +30,17 @@ func _ready():
 func _input_event(viewport, event, shape_idx):
 	print("Input event recibido. shape_idx:", shape_idx, "zona_activada:", zona_activada)
 	if event is InputEventMouseButton and event.pressed:
+		# Si es una zona normal, maneja enemigos
 		if zonas.has(shape_idx) and !zona_activada[shape_idx]:
 			print("Zona activada por clic en shape_idx:", shape_idx)
 			zona_activada[shape_idx] = true
 			generar_un_enemigo(shape_idx)
+		# Si es el nodo central
+		elif shape_idx == shape_idx_nodo_central:
+			if puede_activar_nodo_central:
+				mostrar_pantalla_victoria()
+			else:
+				print("Aún no puedes activar el nodo central")
 
 func generar_un_enemigo(shape_idx):
 	var zona = zonas[shape_idx]
@@ -78,23 +90,50 @@ func _on_enemy_fully_removed(shape_idx):
 		enemigos_vivos[shape_idx] = 0
 		enemigos_removidos[shape_idx] = 0
 		zona_activada[shape_idx] = false
+		zonas_completadas[shape_idx] = true # <-- ¡Agrega esto!
 
 		var escena = escenas_por_zona[shape_idx].instantiate()
 
-# 🔹 Agregamos la escena al CanvasLayer (Overlay)
+		# Agregamos la escena al CanvasLayer (Overlay)
 		var overlay = get_tree().get_current_scene().get_node("Overlay")
 		overlay.add_child(escena)
+		
+		escena.connect("minijuego_completado", Callable(self, "_on_minijuego_completado").bind(shape_idx))
+		
+		if _todas_zonas_completas() and not juego_finalizado:
+			juego_finalizado = true
+			_mostrar_mensaje_final()
+			_activar_nodo_central()
 
-# 🔹 Esperamos un frame para que Godot calcule tamaños y layouts
-#		await get_tree().process_frame
+func _todas_zonas_completas():
+	for key in zonas_completadas.keys():
+		if not zonas_completadas[key]:
+			return false
+	return true
+	
+func _mostrar_mensaje_final():
+	var overlay = get_tree().get_current_scene().get_node("Overlay")
+	var label = Label.new()
+	label.text = "¡Dirígete al nodo central y activa la palanca para ganar!"
+	label.name = "MensajeFinal"
+	label.set_anchors_preset(Control.PRESET_CENTER)
+	overlay.add_child(label)
 
-# 🔹 Centramos dependiendo del tipo de escena
-	#	var viewport_size = get_viewport().get_visible_rect().size
+func _activar_nodo_central():
+	puede_activar_nodo_central = true
+	print("Nodo central ACTIVADO, ahora puedes darle click.")
 
-	#	if escena is Node2D:
-			
-	# Si quieres centrarla en el medio exacto de la pantalla
-	#		escena.position = viewport_size / 2
-
-	#	elif escena is Control:
-	#		escena.set_anchors_preset(Control.PRESET_FULL_RECT)
+func mostrar_pantalla_victoria():
+	var win_scene = preload("res://inicio/win.tscn").instantiate()
+	var overlay = get_tree().get_current_scene().get_node("Overlay")
+	overlay.add_child(win_scene)
+	# Opcional: eliminar el mensaje final si existe
+	if overlay.has_node("MensajeFinal"):
+		overlay.get_node("MensajeFinal").queue_free()
+		
+func _on_minijuego_completado(shape_idx):
+	zonas_completadas[shape_idx] = true
+	if _todas_zonas_completas() and not juego_finalizado:
+		juego_finalizado = true
+		_mostrar_mensaje_final()
+		_activar_nodo_central()

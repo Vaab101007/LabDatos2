@@ -76,9 +76,9 @@ func _on_hit_area_entered(area: Area2D) -> void:
 			print("💥 daño enviado a:", enemy.name)
 
 # --- Recibir daño del enemigo (PASO 3) ---
-var hp := 50
+var hp := 100
 var invulnerable := false
-var i_frames := 0.5
+var i_frames := 1.0
 
 func take_damage(amount: int) -> void:
 	if invulnerable or is_dead:
@@ -87,7 +87,11 @@ func take_damage(amount: int) -> void:
 	hp -= amount
 	if hp < 0: hp = 0
 	print("💥 Player recibió", amount, "de daño. HP:", hp)
-
+	
+	var attacker = get_tree().get_first_node_in_group("enemy")
+	if attacker:
+		var direction = (global_position - attacker.global_position).normalized()
+		global_position += direction * 16  # Ajusta la fuerza según tu juego
 	# Anim de daño direccional si existe
 	var dmg_name := "daño_" + last_direction
 	if anim.sprite_frames.has_animation(dmg_name):

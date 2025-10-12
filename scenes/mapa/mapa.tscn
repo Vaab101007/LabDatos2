@@ -11,17 +11,17 @@
 [ext_resource type="Script" uid="uid://b8wjg0wtsrrrr" path="res://scenes/scripts/mapa.gd" id="9_vt6gj"]
 [ext_resource type="Texture2D" uid="uid://wy5nme2tt1vd" path="res://inicio/buttons/exitButton.tres" id="10_t6s33"]
 [ext_resource type="Texture2D" uid="uid://i6xux8ncq63h" path="res://inicio/buttons/exitButtonPress.tres" id="11_2rmvy"]
-[ext_resource type="Script" uid="uid://b7xkn24k7fi6v" path="res://inicio/scripts/exit_button.gd" id="12_4ouhh"]
+[ext_resource type="Script" path="res://inicio/scripts/exit_button.gd" id="12_4ouhh"]
 [ext_resource type="Texture2D" uid="uid://clldwnus62fb2" path="res://inicio/buttons/atrasButton.tres" id="13_p3wn2"]
 [ext_resource type="Texture2D" uid="uid://b78l0b3x6dnqr" path="res://inicio/buttons/atrasPressButton.tres" id="14_okm07"]
-[ext_resource type="Script" uid="uid://duww8cqcmif17" path="res://inicio/scripts/menu_button.gd" id="15_f1toh"]
-[ext_resource type="Texture2D" uid="uid://b7w0y5jqdpc6m" path="res://inicio/buttons/idkPress.tres" id="16_v0gbs"]
-[ext_resource type="Texture2D" uid="uid://d2fyswi4w7343" path="res://inicio/buttons/idk.tres" id="17_wfprg"]
+[ext_resource type="Script" path="res://inicio/scripts/menu_button.gd" id="15_f1toh"]
+[ext_resource type="Texture2D" path="res://inicio/buttons/idkPress.tres" id="16_v0gbs"]
+[ext_resource type="Texture2D" path="res://inicio/buttons/idk.tres" id="17_wfprg"]
 [ext_resource type="Texture2D" uid="uid://b32s3y7lv63jc" path="res://inicio/image/fondo33.png" id="18_wfprg"]
 [ext_resource type="Texture2D" uid="uid://d4ni14x8nl2n" path="res://inicio/buttons/musicaButton.tres" id="19_f1evb"]
 [ext_resource type="Script" uid="uid://d4jgkqfp5ly5q" path="res://inicio/scripts/musica_button.gd" id="20_ohftx"]
-[ext_resource type="Texture2D" uid="uid://cn1tlbq5ax54y" path="res://inicio/buttons/palanca.tres" id="21_qs5g0"]
-[ext_resource type="Texture2D" uid="uid://csle6qiixv070" path="res://inicio/buttons/personaje1.tres" id="22_5posd"]
+[ext_resource type="Texture2D" path="res://inicio/buttons/palanca.tres" id="21_qs5g0"]
+[ext_resource type="Texture2D" path="res://inicio/buttons/personaje1.tres" id="22_5posd"]
 [ext_resource type="FontFile" uid="uid://b5lt21bsvyn6v" path="res://assets/Fonts/Pixeled.ttf" id="23_86csk"]
 [ext_resource type="FontFile" uid="uid://t8w28xx3wyy5" path="res://assets/Fonts/ComicHelvetic_Heavy.otf" id="24_d725c"]
 
@@ -214,7 +214,6 @@ tile_set = ExtResource("4_24wre")
 script = ExtResource("8_crek2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameTileMap/Area2D"]
-visible = false
 position = Vector2(473, 201)
 shape = SubResource("CapsuleShape2D_dtod7")
 

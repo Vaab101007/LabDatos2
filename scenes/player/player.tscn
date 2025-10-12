@@ -766,13 +766,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p47bc"]
-size = Vector2(16, 25)
+size = Vector2(9, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75vfm"]
-size = Vector2(11.0013, 35.0013)
+size = Vector2(7.50197, 33.5046)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0owmy"]
-size = Vector2(10.003, 34.9968)
+size = Vector2(6.01211, 32.9998)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lvxji"]
 size = Vector2(16, 25)
@@ -803,7 +803,7 @@ collision_mask = 8
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/ColAtaque2/HitRight"]
-position = Vector2(12.75, 5)
+position = Vector2(12, 2.5)
 shape = ExtResource("4_lvxji")
 debug_color = Color(0.928848, 0.236142, 0.323657, 0.42)
 
@@ -813,7 +813,7 @@ collision_mask = 8
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/ColAtaque2/HitLeft"]
-position = Vector2(-13, 1.5)
+position = Vector2(-12.5, -0.5)
 shape = SubResource("RectangleShape2D_p47bc")
 debug_color = Color(0.897219, 0.000193101, 0.772691, 0.42)
 
@@ -823,8 +823,9 @@ collision_mask = 8
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/ColAtaque2/HitUp"]
-position = Vector2(-5.96046e-08, -11)
+position = Vector2(-0.750661, -9.25133)
 rotation = 1.57212
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_75vfm")
 debug_color = Color(1.15514e-06, 0.637711, 0.388473, 0.42)
 
@@ -834,7 +835,7 @@ collision_mask = 8
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/ColAtaque2/HitDown"]
-position = Vector2(-2.50149, 10.9909)
+position = Vector2(-0.500004, 9.00152)
 rotation = 1.57383
 shape = SubResource("RectangleShape2D_0owmy")
 debug_color = Color(0.668856, 0.508138, 0.112493, 0.42)

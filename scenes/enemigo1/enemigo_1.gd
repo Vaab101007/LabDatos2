@@ -8,7 +8,7 @@ signal enemy_fully_removed
 
 var damage := 1
 var can_hit := true
-var hit_cooldown := 0.30
+var hit_cooldown := 0.5
 
 var jugador: Node2D
 var vel := 105.0
@@ -18,7 +18,7 @@ var hp := 3
 
 var is_dead := false
 var can_take_damage := true
-var hurt_iframes := 0.25
+var hurt_iframes := 0.5
 
 func _ready():
 	jugador = get_tree().get_first_node_in_group("player")

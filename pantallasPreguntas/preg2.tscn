@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://d00bdsatymbpu" path="res://pantallasPreguntas/script/preg_2.gd" id="1_xmppj"]
 [ext_resource type="Texture2D" uid="uid://bfwew80o11ywn" path="res://pantallasPreguntas/image1/Pantalla2.png" id="2_a5ebp"]
-[ext_resource type="Texture2D" uid="uid://cywopum7etive" path="res://inicio/buttons/buttonBlue.tres" id="3_jp3fr"]
-[ext_resource type="Texture2D" uid="uid://cqlua8sjro0ag" path="res://inicio/buttons/buttonBlueC.tres" id="4_d7xe6"]
+[ext_resource type="Texture2D" path="res://inicio/buttons/buttonBlue.tres" id="3_jp3fr"]
+[ext_resource type="Texture2D" path="res://inicio/buttons/buttonBlueC.tres" id="4_d7xe6"]
 [ext_resource type="FontFile" uid="uid://t8w28xx3wyy5" path="res://assets/Fonts/ComicHelvetic_Heavy.otf" id="5_funi5"]
 [ext_resource type="Texture2D" uid="uid://b32s3y7lv63jc" path="res://inicio/image/fondo33.png" id="6_smkl4"]
 [ext_resource type="FontFile" uid="uid://bj44644dulh07" path="res://assets/Fonts/ComicHelvetic_Light.otf" id="7_ut05k"]
@@ -13,7 +13,7 @@
 [ext_resource type="FontFile" uid="uid://b5lt21bsvyn6v" path="res://assets/Fonts/Pixeled.ttf" id="11_iqqya"]
 [ext_resource type="Texture2D" uid="uid://clldwnus62fb2" path="res://inicio/buttons/atrasButton.tres" id="12_miu6r"]
 [ext_resource type="Texture2D" uid="uid://b78l0b3x6dnqr" path="res://inicio/buttons/atrasPressButton.tres" id="13_ha6fr"]
-[ext_resource type="Script" uid="uid://duww8cqcmif17" path="res://inicio/scripts/menu_button.gd" id="14_l602w"]
+[ext_resource type="Script" path="res://inicio/scripts/menu_button.gd" id="14_l602w"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xteoj"]
 texture = ExtResource("2_a5ebp")
