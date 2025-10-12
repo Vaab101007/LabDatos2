@@ -825,7 +825,6 @@ monitoring = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/ColAtaque2/HitUp"]
 position = Vector2(-0.750661, -9.25133)
 rotation = 1.57212
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_75vfm")
 debug_color = Color(1.15514e-06, 0.637711, 0.388473, 0.42)
 

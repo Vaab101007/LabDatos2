@@ -26,20 +26,20 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_2f1bg")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 520.0
-offset_top = 24.0
-offset_right = 770.0
-offset_bottom = 115.0
+offset_left = 507.0
+offset_top = 25.0
+offset_right = 757.0
+offset_bottom = 116.0
 theme_override_fonts/font = ExtResource("2_s70m2")
 theme_override_font_sizes/font_size = 32
 text = "OBJETIVO"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = 192.0
-offset_top = 128.0
-offset_right = 1040.0
-offset_bottom = 559.0
+offset_left = 212.0
+offset_top = 148.0
+offset_right = 1060.0
+offset_bottom = 579.0
 theme_override_fonts/font = ExtResource("3_0alhc")
 theme_override_font_sizes/font_size = 24
 text = "El despertar de la conciencia, el jugador guía el proceso de restauración del sistema de Bella, una IA que lucha por recuperar el control frente a su contraparte corrupta, EVA.
